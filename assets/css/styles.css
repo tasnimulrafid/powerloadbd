@@ -65,15 +65,20 @@ button {
   position: sticky;
   top: 0;
   z-index: 10;
+  min-height: 76px;
+  background: rgba(255, 255, 255, .96);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+
+.nav-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
   min-height: 76px;
-  padding: 0 max(18px, 5vw);
-  background: rgba(255, 255, 255, .96);
-  border-bottom: 1px solid var(--line);
-  backdrop-filter: blur(12px);
 }
 
 .brand {
@@ -181,7 +186,11 @@ button {
   color: #fff;
 }
 
-.hero-inner {
+.hero-inner,
+.nav-inner,
+.band-inner,
+.footer-inner,
+.copyright-inner {
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;
 }
@@ -359,14 +368,17 @@ button {
 }
 
 .band {
+  width: 100%;
+  max-width: none;
+  padding: clamp(52px, 8vw, 72px) 0;
+  background: var(--surface);
+}
+
+.band-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 28px;
-  width: 100%;
-  max-width: none;
-  padding: clamp(52px, 8vw, 72px) max(18px, 5vw);
-  background: var(--surface);
 }
 
 .compact-band {
@@ -376,7 +388,7 @@ button {
   padding-bottom: 52px;
 }
 
-.band > div {
+.band-inner > div {
   width: min(640px, 100%);
 }
 
@@ -661,12 +673,15 @@ tr:nth-child(even) td {
 }
 
 .footer {
+  padding: 54px 0;
+  color: #fff;
+  background: var(--ink);
+}
+
+.footer-inner {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(180px, .8fr) minmax(220px, 1fr);
   gap: 34px;
-  padding: 54px max(18px, 5vw);
-  color: #fff;
-  background: var(--ink);
 }
 
 .footer-logo {
@@ -691,14 +706,14 @@ tr:nth-child(even) td {
 }
 
 .copyright {
-  padding: 14px max(18px, 5vw);
+  padding: 14px 0;
   color: rgba(255, 255, 255, .74);
   background: #060b13;
   font-size: 14px;
 }
 
 @media (max-width: 1180px) {
-  .nav-wrap {
+  .nav-inner {
     gap: 14px;
   }
 
@@ -728,7 +743,7 @@ tr:nth-child(even) td {
     display: block;
   }
 
-  .nav-wrap {
+  .nav-inner {
     justify-content: space-between;
   }
 
@@ -780,11 +795,11 @@ tr:nth-child(even) td {
   .product-detail,
   .project-intro,
   .contact-grid,
-  .footer {
+  .footer-inner {
     grid-template-columns: 1fr;
   }
 
-  .band {
+  .band-inner {
     display: block;
   }
 }
@@ -808,7 +823,8 @@ tr:nth-child(even) td {
     height: 44px;
   }
 
-  .nav-wrap {
+  .nav-wrap,
+  .nav-inner {
     min-height: 68px;
   }
 
@@ -822,7 +838,11 @@ tr:nth-child(even) td {
   }
 
   .hero-inner,
-  .section {
+  .section,
+  .nav-inner,
+  .band-inner,
+  .footer-inner,
+  .copyright-inner {
     width: calc(100% - 32px);
   }
 
@@ -890,7 +910,11 @@ tr:nth-child(even) td {
 
 @media (max-width: 380px) {
   .hero-inner,
-  .section {
+  .section,
+  .nav-inner,
+  .band-inner,
+  .footer-inner,
+  .copyright-inner {
     width: calc(100% - 24px);
   }
 
@@ -900,8 +924,6 @@ tr:nth-child(even) td {
   }
 
   .nav-wrap {
-    padding-right: 12px;
-    padding-left: 12px;
   }
 
   .main-nav {

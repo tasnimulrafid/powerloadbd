@@ -21,31 +21,32 @@
       <div class="topbar">
         <span>${data.company.phone}</span>
         <span>${data.company.hours}</span>
-        <a href="mailto:${data.company.email}">Get a quote</a>
       </div>
       <header class="nav-wrap">
-        <a class="brand" href="${path("index.html")}" aria-label="${data.company.name} home">
-          <img src="${path(data.company.logo)}" alt="${data.company.name} logo">
-          <span>${data.company.name}</span>
-        </a>
-        <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <nav class="main-nav" aria-label="Primary navigation">
-          <a href="${path("index.html")}">Home</a>
-          <div class="nav-group">
-            <button type="button">About Us</button>
-            <div class="dropdown">${about}</div>
-          </div>
-          <div class="nav-group">
-            <button type="button">Products</button>
-            <div class="dropdown">${products}</div>
-          </div>
-          <a href="${path("clients.html")}">Clients</a>
-          <a href="${path("archives.html")}">Archives</a>
-          <a href="${path("projects.html")}">Project</a>
-          <a href="${path("contact.html")}">Contact</a>
-        </nav>
+        <div class="nav-inner">
+          <a class="brand" href="${path("index.html")}" aria-label="${data.company.name} home">
+            <img src="${path(data.company.logo)}" alt="${data.company.name} logo">
+            <span>${data.company.name}</span>
+          </a>
+          <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+          <nav class="main-nav" aria-label="Primary navigation">
+            <a href="${path("index.html")}">Home</a>
+            <div class="nav-group">
+              <button type="button">About Us</button>
+              <div class="dropdown">${about}</div>
+            </div>
+            <div class="nav-group">
+              <button type="button">Products</button>
+              <div class="dropdown">${products}</div>
+            </div>
+            <a href="${path("clients.html")}">Clients</a>
+            <a href="${path("archives.html")}">Archives</a>
+            <a href="${path("projects.html")}">Project</a>
+            <a href="${path("contact.html")}">Contact</a>
+          </nav>
+        </div>
       </header>
     `;
 
@@ -61,22 +62,26 @@
     const footer = document.getElementById("site-footer");
     footer.innerHTML = `
       <footer class="footer">
-        <div>
-          <img src="${path(data.company.logo)}" alt="" class="footer-logo">
-          <p>${data.company.slogan}</p>
-        </div>
-        <div>
-          <h3>Products</h3>
-          ${data.products.slice(0, 6).map((item) => `<a href="${path(item.href)}">${item.name}</a>`).join("")}
-        </div>
-        <div>
-          <h3>Contact</h3>
-          <p>${data.company.address}</p>
-          <a href="tel:${data.company.phone.replace(/\s/g, "")}">${data.company.phone}</a>
-          <a href="mailto:${data.company.email}">${data.company.email}</a>
+        <div class="footer-inner">
+          <div>
+            <img src="${path(data.company.logo)}" alt="" class="footer-logo">
+            <p>${data.company.slogan}</p>
+          </div>
+          <div>
+            <h3>Products</h3>
+            ${data.products.slice(0, 6).map((item) => `<a href="${path(item.href)}">${item.name}</a>`).join("")}
+          </div>
+          <div>
+            <h3>Contact</h3>
+            <p>${data.company.address}</p>
+            <a href="tel:${data.company.phone.replace(/\s/g, "")}">${data.company.phone}</a>
+            <a href="mailto:${data.company.email}">${data.company.email}</a>
+          </div>
         </div>
       </footer>
-      <div class="copyright">Copyright © ${new Date().getFullYear()} ${data.company.name}. All rights reserved.</div>
+      <div class="copyright">
+        <div class="copyright-inner">Copyright © ${new Date().getFullYear()} ${data.company.name}. All rights reserved.</div>
+      </div>
     `;
   }
 
@@ -89,7 +94,6 @@
           <h1>${title}</h1>
           <p>${text}</p>
           <div class="hero-actions">
-            <a class="btn primary" href="${path("contact.html")}">Request Quotation</a>
             <a class="btn secondary" href="${path("products/generator.html")}">View Models</a>
           </div>
         </div>
@@ -132,14 +136,16 @@
         <div class="product-grid">${productCards}</div>
       </section>
       <section class="section band">
-        <div>
-          <p class="kicker">Catalogues</p>
-          <h2>Review product and generator details</h2>
-          <p>Download the provided Power Load BD catalogue files for more project discussion material.</p>
-        </div>
-        <div class="button-row">
-          <a class="btn primary" href="${path("assets/catalogs/powerloadbd-main-catalog.pdf")}">Main Catalogue</a>
-          <a class="btn secondary" href="${path("assets/catalogs/powerloadbd-generator-catalog.pdf")}">Generator Catalogue</a>
+        <div class="band-inner">
+          <div>
+            <p class="kicker">Catalogues</p>
+            <h2>Review product and generator details</h2>
+            <p>Download the provided Power Load BD catalogue files for more project discussion material.</p>
+          </div>
+          <div class="button-row">
+            <a class="btn primary" href="${path("assets/catalogs/powerloadbd-main-catalog.pdf")}">Main Catalogue</a>
+            <a class="btn secondary" href="${path("assets/catalogs/powerloadbd-generator-catalog.pdf")}">Generator Catalogue</a>
+          </div>
         </div>
       </section>
     `;
@@ -198,7 +204,6 @@
           <p>${item.summary}</p>
           <ul>${item.bullets.map((bullet) => `<li>${bullet}</li>`).join("")}</ul>
           <div class="button-row">
-            <a class="btn primary" href="${path("contact.html")}">Ask For Quotation</a>
             ${catalogButton}
           </div>
         </div>
@@ -225,13 +230,15 @@
     app.innerHTML = `
       ${hero("Clients", "Sectors Served", "Power Load BD is positioned for industrial, commercial, residential, and institutional electrical power requirements.", "assets/images/products/mdb-db-sdb-panel.jpg")}
       <section class="section band compact-band">
-        <div>
-          <p class="kicker">Client Reference</p>
-          <h2>Download the client list</h2>
-          <p>The client list PDF is available as a quick reference for previous work and business development discussions.</p>
-        </div>
-        <div class="button-row">
-          <a class="btn primary" href="${path("assets/catalogs/client-list.pdf")}">Client List PDF</a>
+        <div class="band-inner">
+          <div>
+            <p class="kicker">Client Reference</p>
+            <h2>Download the client list</h2>
+            <p>The client list PDF is available as a quick reference for previous work and business development discussions.</p>
+          </div>
+          <div class="button-row">
+            <a class="btn primary" href="${path("assets/catalogs/client-list.pdf")}">Client List PDF</a>
+          </div>
         </div>
       </section>
       <section class="section client-grid">

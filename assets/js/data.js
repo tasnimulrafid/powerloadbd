@@ -148,7 +148,7 @@ window.POWERLOAD_SITE = {
       body: [
         "Power Load BD is an electrical power solutions company focused on substation systems, transformers, switchgear, generator solutions, panels, lift coordination, and solar energy products.",
         "The company material highlights a practical product portfolio for power distribution and backup power needs, with catalogue-backed generator ranges and industrial electrical equipment visuals.",
-        "This website is structured to help buyers quickly understand the company, review product categories, inspect model details, and contact the team for project discussions or quotations."
+        "This website is structured to help buyers quickly understand the company, review product categories, inspect model details, and contact the team for project discussions."
       ]
     },
     mission: {
