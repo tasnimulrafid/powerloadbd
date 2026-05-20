@@ -227,6 +227,40 @@
 
   function renderClients() {
     document.title = `Clients | ${data.company.name}`;
+    const clientRows = data.clientsList ? data.clientsList.map((client) => `
+      <tr>
+        <td>${client.id}</td>
+        <td>
+          <strong>${client.company}</strong><br>
+          <span style="font-size: 0.9em; color: #555;">${client.address}</span>
+        </td>
+        <td>${client.rating}</td>
+      </tr>
+    `).join("") : "";
+
+    const clientTable = data.clientsList ? `
+      <section class="section">
+        <div class="section-head">
+          <p class="kicker">Full List</p>
+          <h2>Our Clients</h2>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th>Company Name & Address</th>
+                <th>Rating / Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${clientRows}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    ` : "";
+
     app.innerHTML = `
       ${hero("Clients", "Sectors Served", "Power Load BD is positioned for industrial, commercial, residential, and institutional electrical power requirements.", "assets/images/products/mdb-db-sdb-panel.jpg")}
       <section class="section band compact-band">
@@ -244,6 +278,7 @@
       <section class="section client-grid">
         ${["Industrial factories", "Commercial buildings", "Residential developments", "Hospitals and service facilities", "Government and utility projects", "Renewable energy clients"].map((item) => `<div>${item}</div>`).join("")}
       </section>
+      ${clientTable}
     `;
   }
 
