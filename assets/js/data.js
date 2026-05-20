@@ -1,8 +1,8 @@
 window.POWERLOAD_SITE = {
   company: {
-    name: "PowerLoad BD",
+    name: "Power Load BD",
     slogan: "Power solutions engineered for reliable operation",
-    phone: "+880 1711 541485",
+    phone: "+8801674149747",
     email: "info@powerloadbd.com",
     address: "Dhaka, Bangladesh",
     hours: "Sat to Thu, 9:00am - 6:00pm",
@@ -13,8 +13,8 @@ window.POWERLOAD_SITE = {
     { label: "Mission & Vision", href: "about/mission-vision.html", key: "mission" },
     { label: "Management", href: "about/management.html", key: "management" },
     { label: "Quality Policy", href: "about/quality-policy.html", key: "quality" },
-    { label: "Values of PowerLoad BD", href: "about/values.html", key: "values" },
-    { label: "Why PowerLoad BD", href: "about/why-powerload.html", key: "why" }
+    { label: "Values of Power Load BD", href: "about/values.html", key: "values" },
+    { label: "Why Power Load BD", href: "about/why-powerload.html", key: "why" }
   ],
   products: [
     {
@@ -143,10 +143,10 @@ window.POWERLOAD_SITE = {
   ],
   pages: {
     about: {
-      title: "About PowerLoad BD",
+      title: "About Power Load BD",
       kicker: "Company Overview",
       body: [
-        "PowerLoad BD is an electrical power solutions company focused on substation systems, transformers, switchgear, generator solutions, panels, lift coordination, and solar energy products.",
+        "Power Load BD is an electrical power solutions company focused on substation systems, transformers, switchgear, generator solutions, panels, lift coordination, and solar energy products.",
         "The company material highlights a practical product portfolio for power distribution and backup power needs, with catalogue-backed generator ranges and industrial electrical equipment visuals.",
         "This website is structured to help buyers quickly understand the company, review product categories, inspect model details, and contact the team for project discussions or quotations."
       ]
@@ -164,13 +164,13 @@ window.POWERLOAD_SITE = {
       title: "Quality Policy",
       kicker: "Standards",
       body: [
-        "PowerLoad BD approaches each project with attention to equipment selection, installation suitability, protection, safety, and after-sales support.",
+        "Power Load BD approaches each project with attention to equipment selection, installation suitability, protection, safety, and after-sales support.",
         "The quality policy is centered on understanding client load requirements, offering appropriate technical solutions, and maintaining clear documentation from inquiry to delivery."
       ],
       points: ["Fit-for-purpose product selection", "Clear technical communication", "Project-specific inspection and support", "Continuous improvement through client feedback"]
     },
     values: {
-      title: "Values of PowerLoad BD",
+      title: "Values of Power Load BD",
       kicker: "Working Principles",
       body: [
         "The company values practical engineering, reliability, accountability, and long-term trust.",
@@ -179,10 +179,10 @@ window.POWERLOAD_SITE = {
       points: ["Reliability", "Integrity", "Safety", "Responsiveness", "Technical discipline", "Client commitment"]
     },
     why: {
-      title: "Why PowerLoad BD",
+      title: "Why Power Load BD",
       kicker: "Reasons To Work With Us",
       body: [
-        "PowerLoad BD brings multiple power-system categories into one coordinated portfolio, making it easier for clients to source equipment and support from a single team.",
+        "Power Load BD brings multiple power-system categories into one coordinated portfolio, making it easier for clients to source equipment and support from a single team.",
         "The product range covers primary distribution, backup generation, low-voltage distribution, renewable energy, and vertical transportation coordination."
       ],
       points: ["Broad electrical product portfolio", "Catalogue-backed generator model options", "Project-focused technical discussion", "Support for industrial, commercial, and residential needs"]
@@ -193,7 +193,7 @@ window.POWERLOAD_SITE = {
       name: "Chairman",
       role: "Chairman",
       image: "assets/images/chairman.png",
-      detail: "Provides strategic leadership and business direction for PowerLoad BD, with focus on reliable project delivery and long-term client confidence."
+      detail: "Provides strategic leadership and business direction for Power Load BD, with focus on reliable project delivery and long-term client confidence."
     },
     {
       name: "Chief Executive Officer",
@@ -282,8 +282,8 @@ window.POWERLOAD_SITE = {
   ],
   archives: {
     documents: [
-      ["Client List", "Reference PDF for PowerLoad BD client and work history.", "assets/catalogs/client-list.pdf"],
-      ["Main Catalogue", "PowerLoad BD product catalogue.", "assets/catalogs/powerloadbd-main-catalog.pdf"],
+      ["Client List", "Reference PDF for Power Load BD client and work history.", "assets/catalogs/client-list.pdf"],
+      ["Main Catalogue", "Power Load BD product catalogue.", "assets/catalogs/powerloadbd-main-catalog.pdf"],
       ["Generator Catalogue", "Cummins, Ricardo, Lambert, and KPT generator model details.", "assets/catalogs/powerloadbd-generator-catalog.pdf"]
     ],
     gallery: [

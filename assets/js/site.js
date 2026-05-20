@@ -115,7 +115,7 @@
         <div>
           <p class="kicker">About The Company</p>
           <h2>Built around practical power-system needs</h2>
-          <p>PowerLoad BD brings core electrical products into one organized portfolio, helping clients discuss power distribution, backup generation, panel work, and renewable energy from one place.</p>
+          <p>Power Load BD brings core electrical products into one organized portfolio, helping clients discuss power distribution, backup generation, panel work, and renewable energy from one place.</p>
         </div>
         <div class="stat-grid">
           <div><strong>8</strong><span>Product categories</span></div>
@@ -135,7 +135,7 @@
         <div>
           <p class="kicker">Catalogues</p>
           <h2>Review product and generator details</h2>
-          <p>Download the provided PowerLoad BD catalogue files for more project discussion material.</p>
+          <p>Download the provided Power Load BD catalogue files for more project discussion material.</p>
         </div>
         <div class="button-row">
           <a class="btn primary" href="${path("assets/catalogs/powerloadbd-main-catalog.pdf")}">Main Catalogue</a>
@@ -172,7 +172,7 @@
       </article>
     `).join("");
     app.innerHTML = `
-      ${hero("Management", "Leadership", "Meet the leadership team guiding PowerLoad BD's business, client service, and project execution.", "assets/images/products/transformer.jpg")}
+      ${hero("Management", "Leadership", "Meet the leadership team guiding Power Load BD's business, client service, and project execution.", "assets/images/products/transformer.jpg")}
       <section class="section people-grid">${people}</section>
     `;
   }
@@ -223,7 +223,7 @@
   function renderClients() {
     document.title = `Clients | ${data.company.name}`;
     app.innerHTML = `
-      ${hero("Clients", "Sectors Served", "PowerLoad BD is positioned for industrial, commercial, residential, and institutional electrical power requirements.", "assets/images/products/mdb-db-sdb-panel.jpg")}
+      ${hero("Clients", "Sectors Served", "Power Load BD is positioned for industrial, commercial, residential, and institutional electrical power requirements.", "assets/images/products/mdb-db-sdb-panel.jpg")}
       <section class="section band compact-band">
         <div>
           <p class="kicker">Client Reference</p>
@@ -290,12 +290,12 @@
       </article>
     `).join("");
     app.innerHTML = `
-      ${hero("Project", "Completed Work", "A portfolio view of PowerLoad BD project activity across panels, substations, generators, metering, and solar installation.", "assets/images/projects/lt-panel-commissioning.jpg")}
+      ${hero("Project", "Completed Work", "A portfolio view of Power Load BD project activity across panels, substations, generators, metering, and solar installation.", "assets/images/projects/lt-panel-commissioning.jpg")}
       <section class="section project-intro">
         <div>
           <p class="kicker">Project Experience</p>
           <h2>Previous work clients can review before starting a new project</h2>
-          <p>These cards use real site and archive images so visitors can quickly understand the kind of power-system work PowerLoad BD handles.</p>
+          <p>These cards use real site and archive images so visitors can quickly understand the kind of power-system work Power Load BD handles.</p>
         </div>
         <div class="stat-grid">
           <div><strong>10</strong><span>Featured project cards</span></div>
