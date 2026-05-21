@@ -3,10 +3,10 @@ window.POWERLOAD_SITE = {
     name: "Power Load BD",
     slogan: "Power solutions engineered for reliable operation",
     phone: "+8801674149747",
-    email: "info@powerloadbd.com",
-    address: "Dhaka, Bangladesh",
+    email: "powerloadbd47@gmail.com",
+    address: "Gazi Garden (G-2, 2nd Floor), House-379, Mazibari Road, Dakkhinkhan, Dhaka 1230",
     hours: "Sat to Thu, 9:00am - 6:00pm",
-    logo: "assets/images/powerloadbd-logo.jpeg"
+    logo: "images/powerloadbd_logo.jpeg"
   },
   aboutPages: [
     { label: "About", href: "about/about.html", key: "about" },
@@ -14,7 +14,7 @@ window.POWERLOAD_SITE = {
     { label: "Management", href: "about/management.html", key: "management" },
     { label: "Quality Policy", href: "about/quality-policy.html", key: "quality" },
     { label: "Values of Power Load BD", href: "about/values.html", key: "values" },
-    { label: "Why Power Load BD", href: "about/why-powerload.html", key: "why" }
+    { label: "Why Power Load BD?", href: "about/why-powerload.html", key: "why" }
   ],
   products: [
     {
@@ -179,7 +179,7 @@ window.POWERLOAD_SITE = {
       points: ["Reliability", "Integrity", "Safety", "Responsiveness", "Technical discipline", "Client commitment"]
     },
     why: {
-      title: "Why Power Load BD",
+      title: "Why Power Load BD?",
       kicker: "Reasons To Work With Us",
       body: [
         "Power Load BD brings multiple power-system categories into one coordinated portfolio, making it easier for clients to source equipment and support from a single team.",
@@ -192,20 +192,62 @@ window.POWERLOAD_SITE = {
     {
       name: "Chairman",
       role: "Chairman",
-      image: "assets/images/chairman.png",
+      image: "images/powerloadbd_chairman.png",
       detail: "Provides strategic leadership and business direction for Power Load BD, with focus on reliable project delivery and long-term client confidence."
     },
     {
       name: "Chief Executive Officer",
       role: "CEO",
-      image: "assets/images/ceo.jpeg",
+      image: "images/powerloadbd_ceo.png",
       detail: "Leads customer coordination, business development, and operational follow-through across the company's product and service portfolio."
     },
     {
       name: "Director",
       role: "Director",
-      image: "",
+      image: "images/powerloadbd_director.png",
       detail: "Supports project oversight, procurement coordination, quality control, and service planning. Add the director's photo and full name when available."
+    }
+  ],
+  serviceTeam: [
+    {
+      key: "executive-director",
+      name: "TBD",
+      role: "Executive Director",
+      image: "",
+      detail: "Details will be provided later.",
+      href: "service/executive-director.html"
+    },
+    {
+      key: "asst-manager",
+      name: "TBD",
+      role: "Asst. Manager (Sales & Service)",
+      image: "",
+      detail: "Details will be provided later.",
+      href: "service/asst-manager.html"
+    },
+    {
+      key: "service-engineer-1",
+      name: "TBD",
+      role: "Service Engineer",
+      image: "",
+      detail: "Details will be provided later.",
+      href: "service/service-engineer-1.html"
+    },
+    {
+      key: "service-engineer-2",
+      name: "TBD",
+      role: "Service Engineer",
+      image: "",
+      detail: "Details will be provided later.",
+      href: "service/service-engineer-2.html"
+    },
+    {
+      key: "executive-marketing",
+      name: "TBD",
+      role: "Executive (Marketing & Sales)",
+      image: "",
+      detail: "Details will be provided later.",
+      href: "service/executive-marketing.html"
     }
   ],
   projects: [
@@ -345,10 +387,10 @@ window.POWERLOAD_SITE = {
     { id: "41", company: "Sukran Food & Beverage", address: "Kaliyakur, Gazipur.", rating: "LT CT -3 Nos" },
     { id: "42", company: "Sahajamal Hospital", address: "Islampur, Jamalpur, Mymenshingh.", rating: "30 kva Ricardo Generator" },
     { id: "43", company: "Ahadhunik Hospital", address: "Islampur, Jamalpur, Mymenshingh.", rating: "40 kva Ricardo Generator" },
-    { id: "44", company: "Islampur Oditoriyam", address: "Islampur, Jamalpur, Mymenshingh.", rating: "150 kva Sub Station" },
-    { id: "45", company: "Islampur Oditoriyam", address: "Islampur, Jamalpur, Mymenshingh.", rating: "62.5 kva Ricardo Generator" },
-    { id: "46", company: "Islampur Oditoriyam", address: "Islampur, Jamalpur, Mymenshingh.", rating: "12 kw Solar" },
-    { id: "47", company: "Islampur Oditoriyam", address: "Islampur, Jamalpur, Mymenshingh", rating: "11 kv CT & PT" },
+    { id: "44", company: "Islampur Auditorium", address: "Islampur, Jamalpur, Mymenshingh.", rating: "150 kva Sub Station" },
+    { id: "45", company: "Islampur Auditorium", address: "Islampur, Jamalpur, Mymenshingh.", rating: "62.5 kva Ricardo Generator" },
+    { id: "46", company: "Islampur Auditorium", address: "Islampur, Jamalpur, Mymenshingh.", rating: "12 kw Solar" },
+    { id: "47", company: "Islampur Auditorium", address: "Islampur, Jamalpur, Mymenshingh", rating: "11 kv CT & PT" },
     { id: "48", company: "Somser Auto Rice Mill", address: "Melandoho, Jamalpur, Mymenshingh.", rating: "630 kva Sub Station" },
     { id: "49", company: "Roni Auto Rice Mill", address: "Melandoho, Jamalpur, Mymenshingh.", rating: "630 kva Sub Station" },
     { id: "50", company: "Bismillah Auto Rice Mill", address: "Melandoho, Jamalpur, Mymenshingh.", rating: "150 kva Ricardo Generator" }

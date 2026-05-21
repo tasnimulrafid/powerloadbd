@@ -10,6 +10,18 @@
     return root + url;
   };
 
+  const setFavicon = () => {
+    let link = document.querySelector("link[rel~='icon']");
+    if (!link) {
+      link = document.createElement("link");
+      link.rel = "icon";
+      link.type = "image/png";
+      document.head.appendChild(link);
+    }
+    link.href = path("images/powerloadbd_favicon.png");
+  };
+  setFavicon();
+
   const product = (key) => data.products.find((item) => item.key === key);
 
   function renderHeader() {
@@ -44,6 +56,7 @@
             <a href="${path("clients.html")}">Clients</a>
             <a href="${path("archives.html")}">Archives</a>
             <a href="${path("projects.html")}">Project</a>
+            <a href="${path("service.html")}">Service</a>
             <a href="${path("contact.html")}">Contact</a>
           </nav>
         </div>
@@ -74,7 +87,7 @@
           <div>
             <h3>Contact</h3>
             <p>${data.company.address}</p>
-            <a href="tel:${data.company.phone.replace(/\s/g, "")}">${data.company.phone}</a>
+            <a href="tel:${data.company.phone.replace(/[\s\.]/g, "")}">${data.company.phone}</a>
             <a href="mailto:${data.company.email}">${data.company.email}</a>
           </div>
         </div>
@@ -180,6 +193,45 @@
     app.innerHTML = `
       ${hero("Management", "Leadership", "Meet the leadership team guiding Power Load BD's business, client service, and project execution.", "assets/images/products/transformer.jpg")}
       <section class="section people-grid">${people}</section>
+    `;
+  }
+
+  function renderService() {
+    document.title = `Service Team | ${data.company.name}`;
+    const people = data.serviceTeam.map((person) => `
+      <article class="person-card">
+        <a href="${path(person.href)}" style="text-decoration:none; color:inherit;">
+          ${person.image ? `<img src="${path(person.image)}" alt="${person.name}">` : `<div class="avatar">PL</div>`}
+          <div>
+            <p class="kicker">${person.role}</p>
+            <h3>${person.name}</h3>
+            <p>${person.detail}</p>
+          </div>
+        </a>
+      </article>
+    `).join("");
+    app.innerHTML = `
+      ${hero("Service", "Service Team", "Meet the service team dedicated to customer support and technical operations.", "assets/images/products/generator.jpg")}
+      <section class="section people-grid">${people}</section>
+    `;
+  }
+
+  function renderEmployee() {
+    const key = document.body.dataset.key;
+    const person = data.serviceTeam.find((p) => p.key === key);
+    if (!person) return;
+    document.title = `${person.name} | ${data.company.name}`;
+    app.innerHTML = `
+      ${hero(person.name, person.role, person.detail, "")}
+      <section class="section product-detail">
+        <div>
+          <p class="kicker">Profile</p>
+          <h2>${person.name}</h2>
+          <p><strong>Role:</strong> ${person.role}</p>
+          <p>${person.detail}</p>
+        </div>
+        ${person.image ? `<img src="${path(person.image)}" alt="${person.name}" style="max-width:300px; border-radius:8px;">` : `<div class="avatar" style="width:300px; height:300px; display:flex; align-items:center; justify-content:center; font-size:48px;">PL</div>`}
+      </section>
     `;
   }
 
@@ -363,14 +415,28 @@
           <p><strong>Email:</strong> ${data.company.email}</p>
           <p><strong>Hours:</strong> ${data.company.hours}</p>
         </div>
-        <form class="contact-form">
-          <label>Name <input type="text" name="name" placeholder="Your name"></label>
-          <label>Email <input type="email" name="email" placeholder="you@example.com"></label>
-          <label>Requirement <textarea name="message" rows="5" placeholder="Tell us what you need"></textarea></label>
-          <a class="btn primary" href="mailto:${data.company.email}">Send By Email</a>
+        <form class="contact-form" id="contact-form">
+          <label>Name <input type="text" name="name" placeholder="Your name" required></label>
+          <label>Email <input type="email" name="email" placeholder="you@example.com" required></label>
+          <label>Requirement <textarea name="message" rows="5" placeholder="Tell us what you need" required></textarea></label>
+          <button type="submit" class="btn primary">Send By Email</button>
         </form>
       </section>
     `;
+
+    const form = document.getElementById("contact-form");
+    if (form) {
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const fd = new FormData(form);
+        const name = fd.get("name") || "";
+        const email = fd.get("email") || "";
+        const message = fd.get("message") || "";
+        const subject = encodeURIComponent("Inquiry from " + name);
+        const body = encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nRequirement:\n" + message);
+        window.location.href = `mailto:${data.company.email}?subject=${subject}&body=${body}`;
+      });
+    }
   }
 
   const renderers = {
@@ -381,7 +447,9 @@
     clients: renderClients,
     archives: renderArchives,
     projects: renderProjects,
-    contact: renderContact
+    contact: renderContact,
+    service: renderService,
+    employee: renderEmployee
   };
 
   renderHeader();
