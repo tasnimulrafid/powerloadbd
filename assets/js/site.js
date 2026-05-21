@@ -69,6 +69,13 @@
       const open = nav.classList.toggle("is-open");
       toggle.setAttribute("aria-expanded", String(open));
     });
+
+    const navGroups = header.querySelectorAll(".nav-group > button");
+    navGroups.forEach(button => {
+      button.addEventListener("click", () => {
+        button.parentElement.classList.toggle("is-open");
+      });
+    });
   }
 
   function renderFooter() {

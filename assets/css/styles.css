@@ -779,12 +779,17 @@ tr:nth-child(even) td {
   }
 
   .dropdown {
+    display: none;
     position: static;
     min-width: 0;
     opacity: 1;
     pointer-events: auto;
     transform: none;
     box-shadow: none;
+  }
+
+  .nav-group.is-open .dropdown {
+    display: block;
   }
 
   .dropdown a {
