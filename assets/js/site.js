@@ -44,7 +44,6 @@
             <span></span><span></span><span></span>
           </button>
           <nav class="main-nav" aria-label="Primary navigation">
-            <a href="${path("index.html")}">Home</a>
             <div class="nav-group">
               <button type="button">About Us</button>
               <div class="dropdown">${about}</div>
@@ -140,7 +139,7 @@
         </div>
         <div class="stat-grid">
           <div><strong>8</strong><span>Product categories</span></div>
-          <div><strong>3</strong><span>Generator series pages</span></div>
+          <div><strong>4</strong><span>Generator series pages</span></div>
           <div><strong>2</strong><span>Downloadable catalogues</span></div>
           <div><strong>24/7</strong><span>Project-critical mindset</span></div>
         </div>
@@ -204,14 +203,12 @@
     document.title = `Service Team | ${data.company.name}`;
     const people = data.serviceTeam.map((person) => `
       <article class="person-card">
-        <a href="${path(person.href)}" style="text-decoration:none; color:inherit;">
-          ${person.image ? `<img src="${path(person.image)}" alt="${person.name}">` : `<div class="avatar">PL</div>`}
-          <div>
-            <p class="kicker">${person.role}</p>
-            <h3>${person.name}</h3>
-            <p>${person.detail}</p>
-          </div>
-        </a>
+        ${person.image ? `<img src="${path(person.image)}" alt="${person.name}">` : `<div class="avatar">PL</div>`}
+        <div>
+          <p class="kicker">${person.role}</p>
+          <h3>${person.name}</h3>
+          <p>${person.detail}</p>
+        </div>
       </article>
     `).join("");
     app.innerHTML = `
@@ -220,24 +217,7 @@
     `;
   }
 
-  function renderEmployee() {
-    const key = document.body.dataset.key;
-    const person = data.serviceTeam.find((p) => p.key === key);
-    if (!person) return;
-    document.title = `${person.name} | ${data.company.name}`;
-    app.innerHTML = `
-      ${hero(person.name, person.role, person.detail, "")}
-      <section class="section product-detail">
-        <div>
-          <p class="kicker">Profile</p>
-          <h2>${person.name}</h2>
-          <p><strong>Role:</strong> ${person.role}</p>
-          <p>${person.detail}</p>
-        </div>
-        ${person.image ? `<img src="${path(person.image)}" alt="${person.name}" style="max-width:300px; border-radius:8px;">` : `<div class="avatar" style="width:300px; height:300px; display:flex; align-items:center; justify-content:center; font-size:48px;">PL</div>`}
-      </section>
-    `;
-  }
+
 
   function renderProduct() {
     const item = product(document.body.dataset.product);
@@ -452,8 +432,7 @@
     archives: renderArchives,
     projects: renderProjects,
     contact: renderContact,
-    service: renderService,
-    employee: renderEmployee
+    service: renderService
   };
 
   renderHeader();

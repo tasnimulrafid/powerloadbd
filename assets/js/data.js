@@ -222,43 +222,87 @@ window.POWERLOAD_SITE = {
   serviceTeam: [
     {
       key: "executive-director",
-      name: "TBD",
+      name: "AKM Fazlul Haque",
       role: "Executive Director",
-      image: "",
-      detail: "Details will be provided later.",
-      href: "service/executive-director.html"
+      image: "images/services/powerloadbd_executive_director.jpeg",
+      detail: "Directs strategic initiatives and drives business growth by ensuring high-quality client service and reliable project delivery."
+    },
+    {
+      key: "general-manager",
+      name: "Md Atikur Rahman",
+      role: "General Manager",
+      image: "images/services/powerloadbd_general_manager.jpeg",
+      detail: "Coordinates service team activities and oversees daily operations to ensure efficient project execution."
+    },
+    {
+      key: "manager",
+      name: "Engr. Palash Prodhan",
+      role: "Manager (Sales & Service)",
+      image: "images/services/powerloadbd_manager_sales_service.jpeg",
+      detail: "Supports sales strategies and manages client relationships while coordinating the service team for timely solutions."
     },
     {
       key: "asst-manager",
-      name: "TBD",
-      role: "Asst. Manager (Sales & Service)",
-      image: "",
-      detail: "Details will be provided later.",
-      href: "service/asst-manager.html"
-    },
-    {
-      key: "service-engineer-1",
-      name: "TBD",
-      role: "Service Engineer",
-      image: "",
-      detail: "Details will be provided later.",
-      href: "service/service-engineer-1.html"
-    },
-    {
-      key: "service-engineer-2",
-      name: "TBD",
-      role: "Service Engineer",
-      image: "",
-      detail: "Details will be provided later.",
-      href: "service/service-engineer-2.html"
+      name: "Engr. Sumon Mia",
+      role: "Assistant Manager",
+      image: "images/services/powerloadbd_Asst_Manager.jpeg",
+      detail: "Assists the Manager in driving sales and coordinating the service team for efficient and timely project delivery."
     },
     {
       key: "executive-marketing",
-      name: "TBD",
+      name: "Md Mizanoor",
       role: "Executive (Marketing & Sales)",
+      image: "images/services/powerloadbd_executive_maketing_sales.png",
+      detail: "Develops marketing campaigns and engages with prospective clients to expand market reach and promote power solutions."
+    },
+    {
+      key: "executive-2",
+      name: "Md. Amzad Hossain",
+      role: "Executive (Marketing & Sales)",
+      image: "images/services/powerloadbd_executive_marketing_sales.jpeg",
+      detail: "Works with the marketing team to execute campaigns, manage client communication, and assist in business growth strategies."
+    },
+    {
+      key: "service-engineer-2",
+      name: "Engr. Shohanur Rahman Shohan",
+      role: "Service Engineer",
+      image: "images/services/powerloadbd_service_engineer2.jpeg",
+      detail: "Handles on-site troubleshooting, commissioning, and regular servicing for continuous power reliability."
+    },
+    {
+      key: "service-engineer-1",
+      name: "Md. Monjurul Islam",
+      role: "Service Engineer",
+      image: "images/services/powerloadbd_service_engineer1.jpeg",
+      detail: "Provides hands-on technical support, installation, and maintenance to ensure optimal performance of power equipment."
+    },
+    {
+      key: "service-engineer-3",
+      name: "Mostofa Mondol",
+      role: "Service Engineer",
+      image: "images/services/powerloadbd_service_engineer.jpeg",
+      detail: "Provides essential maintenance and on-site technical support to ensure seamless power equipment functionality."
+    },
+    {
+      key: "account-officer",
+      name: "Rafiya Jannat",
+      role: "Account Officer",
+      image: "images/services/powerloadbd_account_officer.jpeg",
+      detail: "Manages financial operations, billing, and accounting processes to ensure accurate and transparent financial reporting."
+    },
+    {
+      key: "hr-admin",
+      name: "Tanvin Jannat",
+      role: "HR & Admin",
+      image: "images/services/powerloadbd_hr_admin.jpeg",
+      detail: "Manages human resources, administrative tasks, and employee relations to foster a productive workplace environment."
+    },
+    {
+      key: "technician",
+      name: "Md Abdullah",
+      role: "Technician",
       image: "",
-      detail: "Details will be provided later.",
-      href: "service/executive-marketing.html"
+      detail: "Assists the engineering team with routine maintenance, equipment assembly, and on-site operational support."
     }
   ],
   projects: [
