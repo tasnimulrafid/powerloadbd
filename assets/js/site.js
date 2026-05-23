@@ -54,7 +54,7 @@
             </div>
             <a href="${path("clients.html")}">Clients</a>
             <a href="${path("archives.html")}">Archives</a>
-            <a href="${path("projects.html")}">Project</a>
+            <a href="${path("projects.html")}">Projects</a>
             <a href="${path("service.html")}">Service</a>
             <a href="${path("contact.html")}">Contact</a>
           </nav>
@@ -92,9 +92,12 @@
           </div>
           <div>
             <h3>Contact</h3>
-            <p>${data.company.address}</p>
+            <p><strong>Office:</strong><br>${data.company.address}</p>
             <a href="tel:${data.company.phone.replace(/[\s\.]/g, "")}">${data.company.phone}</a>
+            ${data.company.phone2 ? `<a href="tel:${data.company.phone2.replace(/[\s\.]/g, "")}">${data.company.phone2}</a>` : ''}
             <a href="mailto:${data.company.email}">${data.company.email}</a>
+            <p><strong>Sub Station Factory:</strong><br>${data.company.factoryAddress}</p>
+            <p><strong>Generator Warehouse:</strong><br>${data.company.warehouseAddress}</p>
           </div>
         </div>
       </footer>
@@ -117,8 +120,48 @@
     `;
   }
 
+  let carouselInterval;
+  function initCarousel() {
+    const track = document.getElementById("carousel-track");
+    if (!track) return;
+    
+    if (carouselInterval) clearInterval(carouselInterval);
+    
+    const cards = track.children;
+    if (cards.length <= 1) return;
+    
+    carouselInterval = setInterval(() => {
+      track.style.transition = 'transform 0.4s ease-in-out';
+      
+      const cardWidth = cards[0].offsetWidth;
+      const gap = 22;
+      const moveDistance = cardWidth + gap;
+      
+      track.style.transform = `translateX(-${moveDistance}px)`;
+      
+      setTimeout(() => {
+        track.style.transition = 'none';
+        track.appendChild(track.children[0]);
+        track.style.transform = 'translateX(0)';
+      }, 400);
+    }, 2000);
+  }
+
   function renderHome() {
     document.title = `${data.company.name} | Power Solutions`;
+    const carouselCards = data.projects.map((item) => `
+      <article class="portfolio-card carousel-card">
+        <a href="${path(item.image)}" class="portfolio-image">
+          <img src="${path(item.image)}" alt="${item.title}" style="${item.imagePosition ? `object-position: ${item.imagePosition}; ` : ''}${item.imageFit ? `object-fit: ${item.imageFit}; ` : ''}">
+          <span>${item.type}</span>
+        </a>
+        <div>
+          <h3>${item.title}</h3>
+          <p>${item.scope}</p>
+        </div>
+      </article>
+    `).join("");
+
     const productCards = data.products.map((item) => `
       <a class="product-card" href="${path(item.href)}">
         <img src="${path(item.image)}" alt="${item.name}">
@@ -146,6 +189,17 @@
       </section>
       <section class="section">
         <div class="section-head">
+          <p class="kicker">Featured Projects</p>
+          <h2>Showcasing our completed work</h2>
+        </div>
+        <div class="carousel-container" id="project-carousel">
+          <div class="carousel-track" id="carousel-track">
+            ${carouselCards}
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-head">
           <p class="kicker">Our Products</p>
           <h2>Solutions for distribution, backup power, and energy efficiency</h2>
         </div>
@@ -165,6 +219,8 @@
         </div>
       </section>
     `;
+    
+    initCarousel();
   }
 
   function renderInfo() {
@@ -356,14 +412,13 @@
     const cards = data.projects.map((item) => `
       <article class="portfolio-card">
         <a href="${path(item.image)}" class="portfolio-image">
-          <img src="${path(item.image)}" alt="${item.title}">
+          <img src="${path(item.image)}" alt="${item.title}" style="${item.imagePosition ? `object-position: ${item.imagePosition}; ` : ''}${item.imageFit ? `object-fit: ${item.imageFit}; ` : ''}">
           <span>${item.type}</span>
         </a>
         <div>
           <h3>${item.title}</h3>
           <p>${item.scope}</p>
           <ul>${item.details.map((detail) => `<li>${detail}</li>`).join("")}</ul>
-          <a class="text-link" href="${path(item.image)}">View project photo</a>
         </div>
       </article>
     `).join("");
@@ -373,11 +428,6 @@
         <div>
           <p class="kicker">Project Experience</p>
           <h2>Previous work clients can review before starting a new project</h2>
-          <p>These cards use real site and archive images so visitors can quickly understand the kind of power-system work Power Load BD handles.</p>
-        </div>
-        <div class="stat-grid">
-          <div><strong>10</strong><span>Featured project cards</span></div>
-          <div><strong>6</strong><span>Work categories</span></div>
         </div>
       </section>
       <section class="section portfolio-grid">
@@ -394,9 +444,11 @@
         <div>
           <p class="kicker">Contact Info</p>
           <h2>${data.company.name}</h2>
-          <p>${data.company.address}</p>
-          <p><strong>Phone:</strong> ${data.company.phone}</p>
+          <p><strong>Office:</strong> ${data.company.address}</p>
+          <p><strong>Phone:</strong> ${data.company.phone}${data.company.phone2 ? `, ${data.company.phone2}` : ''}</p>
           <p><strong>Email:</strong> ${data.company.email}</p>
+          <p><strong>Sub Station Factory:</strong> ${data.company.factoryAddress}</p>
+          <p><strong>Generator Warehouse:</strong> ${data.company.warehouseAddress}</p>
           <p><strong>Hours:</strong> ${data.company.hours}</p>
         </div>
         <form class="contact-form" id="contact-form">

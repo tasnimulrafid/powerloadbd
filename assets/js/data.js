@@ -3,8 +3,11 @@ window.POWERLOAD_SITE = {
     name: "Power Load BD",
     slogan: "Power solutions engineered for reliable operation",
     phone: "+8801674149747",
+    phone2: "+8801766648112",
     email: "powerloadbd47@gmail.com",
     address: "Gazi Garden (G-2, 2nd Floor), House-379, Mazibari Road, Dakkhinkhan, Dhaka 1230",
+    factoryAddress: "Ruhitpur, Keraniganj, Dhaka",
+    warehouseAddress: "Dupadiya Bazar, Dakkhinkhan, Dhaka",
     hours: "Sat to Thu, 9:00am - 6:00pm",
     logo: "images/powerloadbd_logo.jpeg"
   },
@@ -244,7 +247,7 @@ window.POWERLOAD_SITE = {
     {
       key: "asst-manager",
       name: "Engr. Sumon Mia",
-      role: "Assistant Manager",
+      role: "Asst. Manager (Sales & Service)",
       image: "images/services/powerloadbd_Asst_Manager.jpeg",
       detail: "Assists the Manager in driving sales and coordinating the service team for efficient and timely project delivery."
     },
@@ -301,28 +304,21 @@ window.POWERLOAD_SITE = {
       key: "technician",
       name: "Md Abdullah",
       role: "Technician",
-      image: "",
+      image: "images/services/powerloadbd_technician.jpeg",
       detail: "Assists the engineering team with routine maintenance, equipment assembly, and on-site operational support."
     }
   ],
   projects: [
     {
-      title: "DB Panel Wiring & Distribution Setup",
-      type: "Distribution Board",
+      title: "Meter Box Wiring & Distribution Setup",
+      type: "Meter Box Wiring",
       image: "assets/images/projects/panel-wiring.jpg",
       scope: "Internal wiring, feeder arrangement, breaker placement, and distribution board preparation for building electrical loads.",
       details: ["DB/MDB panel work", "Cable routing", "Breaker and busbar arrangement"]
     },
     {
-      title: "Commercial DB Panel Installation",
-      type: "Panel Installation",
-      image: "assets/images/projects/db-panel-installation.jpg",
-      scope: "Site installation and inspection of multi-section distribution boards with outgoing feeder preparation.",
-      details: ["Site wiring support", "Distribution feeders", "Load-side preparation"]
-    },
-    {
-      title: "Transformer & Fabrication Workshop Support",
-      type: "Transformer",
+      title: "Sub-station Workshop Support",
+      type: "Sub-station",
       image: "assets/images/projects/transformer-workshop.jpg",
       scope: "Workshop preparation and coordination for transformer/substation related metal frame and equipment handling.",
       details: ["Transformer support", "Fabrication coordination", "Factory-stage inspection"]
@@ -375,27 +371,34 @@ window.POWERLOAD_SITE = {
       image: "assets/images/projects/lt-panel-commissioning.jpg",
       scope: "LT panel commissioning and load distribution readiness check with indicators and control equipment active.",
       details: ["LT switchgear", "Panel testing", "Operational readiness"]
+    },
+    {
+      title: "Generator Handover",
+      type: "Generator",
+      image: "assets/images/projects/generator_handover.jpeg",
+      imageFit: "contain",
+      scope: "Final inspection, testing, and handover of a newly installed diesel generator system for a commercial facility.",
+      details: ["System testing", "Client walkthrough", "Operational handover"]
     }
   ],
   archives: {
     documents: [
       ["Client List", "Reference PDF for Power Load BD client and work history.", "assets/catalogs/client-list.pdf"],
       ["Main Catalogue", "Power Load BD product catalogue.", "assets/catalogs/powerloadbd-main-catalog.pdf"],
-      ["Generator Catalogue", "Cummins, Ricardo, Lambert, and KPT generator model details.", "assets/catalogs/powerloadbd-generator-catalog.pdf"]
+      ["Generator Catalogue", "Cummins, Perkins, Ricardo, Lambert, and KPT generator model details.", "assets/catalogs/powerloadbd-generator-catalog.pdf"]
     ],
     gallery: [
-      ["Site Delivery", "assets/images/archives/site-delivery-truck.jpg"],
-      ["Panel Delivery", "assets/images/archives/panel-delivery.jpg"],
+      ["Generator Delivery", "assets/images/archives/site-delivery-truck.jpg"],
       ["Panel Handover", "assets/images/archives/panel-handover.jpg"],
       ["Panel Loading", "assets/images/archives/panel-loading.jpg"],
       ["Solar Panel Closeup", "assets/images/archives/solar-panel-closeup.jpg"],
       ["Growatt Inverter", "assets/images/archives/growatt-inverter.jpg"],
-      ["Electrical Components", "assets/images/archives/electrical-components.jpg"],
+      ["Dropout Fuse", "assets/images/archives/electrical-components.jpg"],
       ["Transformer Closeup", "assets/images/archives/transformer-closeup.jpg"],
-      ["PFI Panel", "assets/images/archives/pfi-panel.jpg"],
-      ["Control Box", "assets/images/archives/control-box.jpg"],
-      ["Metering Closeup", "assets/images/archives/metering-closeup.jpg"],
-      ["Panel Site Work", "assets/images/archives/panel-site-work.jpg"]
+      ["LT & PFI Panel", "assets/images/archives/pfi-panel.jpg"],
+      ["LT CT Meter", "assets/images/archives/control-box.jpg"],
+      ["Meeting Closeup", "assets/images/archives/metering-closeup.jpg"],
+      ["Solar Panel Net Metering", "assets/images/archives/panel-site-work.jpg"]
     ]
   },
   clientsList: [
