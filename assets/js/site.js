@@ -113,9 +113,6 @@
           <p class="kicker">${kicker}</p>
           <h1>${title}</h1>
           <p>${text}</p>
-          <div class="hero-actions">
-            <a class="btn secondary" href="${path("products/generator.html")}">View Models</a>
-          </div>
         </div>
       </section>
     `;

@@ -92,10 +92,14 @@ window.POWERLOAD_SITE = {
       name: "Generator",
       href: "products/generator.html",
       image: "assets/images/products/generator.jpg",
-      summary: "Diesel and portable generator ranges including Cummins powered, Ricardo/Lambert powered, and KPT portable gasoline/petrol units.",
+      summary: "Diesel and portable generator ranges including Perkins powered, Cummins powered, Ricardo/Lambert powered, and KPT portable gasoline/petrol units.",
       bullets: ["Prime and standby power options", "Open and canopied genset configurations", "Catalogue-backed model specifications"],
       specs: [
         ["Series", "Model / Engine", "Prime Power", "Standby Power"],
+        ["Perkins", "GP11A / 403A-11G1", "9 kVA / 7.2 kW", "10 kVA / 8 kW"],
+        ["Perkins", "GP110A / 1104C-44TAG2", "100 kVA / 80 kW", "110 kVA / 88 kW"],
+        ["Perkins", "GP660A / 2806A-E18TAG1A", "600 kVA / 480 kW", "660 kVA / 528 kW"],
+        ["Perkins", "GP1500A / 4012-46TWG3A", "1360 kVA / 1088 kW", "1500 kVA / 1200 kW"],
         ["Cummins", "4BT3.9-G1", "30 kVA / 24 kW", "33 kVA / 26 kW"],
         ["Cummins", "6BT5.9-G1", "100 kVA / 80 kW", "110 kVA / 88 kW"],
         ["Cummins", "KT38-G5", "1000 kVA / 800 kW", "1100 kVA / 880 kW"],
@@ -106,6 +110,7 @@ window.POWERLOAD_SITE = {
         ["KPT Portable", "LT12000CLE / LT500", "9.0 kW", "9.5 kW max"]
       ],
       specImages: [
+        "assets/images/products/generator-perkins-spec.jpg",
         "assets/images/products/generator-cummins-spec.jpg",
         "assets/images/products/generator-ricardo-lambert-spec.jpg",
         "assets/images/products/generator-kpt-spec.jpg"
@@ -190,22 +195,28 @@ window.POWERLOAD_SITE = {
   },
   management: [
     {
-      name: "Chairman",
+      name: "Rafiqul Islam",
       role: "Chairman",
       image: "images/powerloadbd_chairman.png",
       detail: "Provides strategic leadership and business direction for Power Load BD, with focus on reliable project delivery and long-term client confidence."
     },
     {
-      name: "Chief Executive Officer",
+      name: "Engr. Shakil Mahmud",
       role: "CEO",
       image: "images/powerloadbd_ceo.png",
       detail: "Leads customer coordination, business development, and operational follow-through across the company's product and service portfolio."
     },
     {
-      name: "Director",
+      name: "Mst. Suriya Yeasmin",
       role: "Director",
-      image: "images/powerloadbd_director.png",
-      detail: "Supports project oversight, procurement coordination, quality control, and service planning. Add the director's photo and full name when available."
+      image: "images/powerloadbd_director2.jpeg",
+      detail: "Focuses on strategic business growth, operational team support, and expanding client relationships to strengthen the company's market presence."
+    },
+    {
+      name: "Refaud Jakia",
+      role: "Director",
+      image: "images/powerloadbd_director1.png",
+      detail: "Oversees project execution, procurement strategies, and quality control to ensure operational excellence across all engineering and service divisions."
     }
   ],
   serviceTeam: [
