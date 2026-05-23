@@ -85,20 +85,26 @@
           <div>
             <img src="${path(data.company.logo)}" alt="" class="footer-logo">
             <p>${data.company.slogan}</p>
-            ${data.company.facebook ? `<div style="margin-top: 1.5rem;"><a href="${data.company.facebook}" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; color: inherit; text-decoration: none; opacity: 0.8; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.312h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg> Facebook Page</a></div>` : ''}
           </div>
           <div>
             <h3>Products</h3>
             ${data.products.slice(0, 6).map((item) => `<a href="${path(item.href)}">${item.name}</a>`).join("")}
           </div>
-          <div>
+          <div class="footer-contact">
             <h3>Contact</h3>
-            <p><strong>Office:</strong><br>${data.company.address}</p>
-            <a href="tel:${data.company.phone.replace(/[\s\.]/g, "")}">${data.company.phone}</a>
-            ${data.company.phone2 ? `<a href="tel:${data.company.phone2.replace(/[\s\.]/g, "")}">${data.company.phone2}</a>` : ''}
-            <a href="mailto:${data.company.email}">${data.company.email}</a>
-            <p><strong>Sub Station Factory:</strong><br>${data.company.factoryAddress}</p>
-            <p><strong>Generator Warehouse:</strong><br>${data.company.warehouseAddress}</p>
+            <div class="footer-contact-grid">
+              <div>
+                <p><strong>Office:</strong><br>${data.company.address}</p>
+                <a href="tel:${data.company.phone.replace(/[\s\.]/g, "")}">${data.company.phone}</a>
+                ${data.company.phone2 ? `<a href="tel:${data.company.phone2.replace(/[\s\.]/g, "")}">${data.company.phone2}</a>` : ''}
+                <a href="mailto:${data.company.email}">${data.company.email}</a>
+              </div>
+              <div>
+                <p><strong>Sub Station Factory:</strong><br>${data.company.factoryAddress}</p>
+                <p><strong>Generator Warehouse:</strong><br>${data.company.warehouseAddress}</p>
+                ${data.company.facebook ? `<div style="margin-top: 1.5rem;"><a href="${data.company.facebook}" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; color: inherit; text-decoration: none; opacity: 0.8; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.312h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg> Facebook Page</a></div>` : ''}
+              </div>
+            </div>
           </div>
         </div>
       </footer>
@@ -450,6 +456,7 @@
           <h2>${data.company.name}</h2>
           <p><strong>Office:</strong> ${data.company.address}</p>
           <p><strong>Phone:</strong> ${data.company.phone}${data.company.phone2 ? `, ${data.company.phone2}` : ''}</p>
+          ${data.company.facebook ? `<p><strong>Facebook:</strong> <a href="${data.company.facebook}" target="_blank" rel="noopener noreferrer">Power Load BD</a></p>` : ''}
           <p><strong>Email:</strong> ${data.company.email}</p>
           <p><strong>Sub Station Factory:</strong> ${data.company.factoryAddress}</p>
           <p><strong>Generator Warehouse:</strong> ${data.company.warehouseAddress}</p>

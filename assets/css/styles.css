@@ -681,8 +681,14 @@ tr:nth-child(even) td {
 
 .footer-inner {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(180px, .8fr) minmax(220px, 1fr);
+  grid-template-columns: minmax(0, 1.1fr) minmax(160px, .7fr) minmax(360px, 2fr);
   gap: 34px;
+}
+
+.footer-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
 }
 
 .footer-logo {
@@ -819,6 +825,7 @@ tr:nth-child(even) td {
   .product-detail,
   .project-intro,
   .contact-grid,
+  .footer-contact-grid,
   .footer-inner {
     grid-template-columns: 1fr;
   }
@@ -909,7 +916,8 @@ tr:nth-child(even) td {
 
   .person-card img,
   .person-card .avatar {
-    height: 260px;
+    height: auto;
+    aspect-ratio: 4 / 5;
   }
 
   .archive-gallery {
