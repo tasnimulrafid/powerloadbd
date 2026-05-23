@@ -85,6 +85,7 @@
           <div>
             <img src="${path(data.company.logo)}" alt="" class="footer-logo">
             <p>${data.company.slogan}</p>
+            ${data.company.facebook ? `<div style="margin-top: 1.5rem;"><a href="${data.company.facebook}" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; color: inherit; text-decoration: none; opacity: 0.8; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.312h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg> Facebook Page</a></div>` : ''}
           </div>
           <div>
             <h3>Products</h3>
@@ -102,7 +103,10 @@
         </div>
       </footer>
       <div class="copyright">
-        <div class="copyright-inner">Copyright © ${new Date().getFullYear()} ${data.company.name}. All rights reserved.</div>
+        <div class="copyright-inner" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+          <div>Copyright © ${new Date().getFullYear()} ${data.company.name}. All rights reserved.</div>
+          <div>Developed by <a href="https://github.com/tasnimulrafid" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">tasnimulrafid</a></div>
+        </div>
       </div>
     `;
   }
@@ -408,7 +412,7 @@
   }
 
   function renderProjects() {
-    document.title = `Project | ${data.company.name}`;
+    document.title = `Projects | ${data.company.name}`;
     const cards = data.projects.map((item) => `
       <article class="portfolio-card">
         <a href="${path(item.image)}" class="portfolio-image">
@@ -423,7 +427,7 @@
       </article>
     `).join("");
     app.innerHTML = `
-      ${hero("Project", "Completed Work", "A portfolio view of Power Load BD project activity across panels, substations, generators, metering, and solar installation.", "assets/images/projects/lt-panel-commissioning.jpg")}
+      ${hero("Projects", "Completed Work", "A portfolio view of Power Load BD project activity across panels, substations, generators, metering, and solar installation.", "assets/images/projects/lt-panel-commissioning.jpg")}
       <section class="section project-intro">
         <div>
           <p class="kicker">Project Experience</p>

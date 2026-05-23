@@ -5,6 +5,7 @@ window.POWERLOAD_SITE = {
     phone: "+8801674149747",
     phone2: "+8801766648112",
     email: "powerloadbd47@gmail.com",
+    facebook: "https://www.facebook.com/profile.php?id=61577599296440",
     address: "Gazi Garden (G-2, 2nd Floor), House-379, Mazibari Road, Dakkhinkhan, Dhaka 1230",
     factoryAddress: "Ruhitpur, Keraniganj, Dhaka",
     warehouseAddress: "Dupadiya Bazar, Dakkhinkhan, Dhaka",
