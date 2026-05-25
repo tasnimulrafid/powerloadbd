@@ -14,8 +14,9 @@ window.POWERLOAD_SITE = {
   },
   aboutPages: [
     { label: "About", href: "about/about.html", key: "about" },
-    { label: "Mission & Vision", href: "about/mission-vision.html", key: "mission" },
     { label: "Management", href: "about/management.html", key: "management" },
+    { label: "Employees & Staff", href: "service.html", key: "service" },
+    { label: "Mission & Vision", href: "about/mission-vision.html", key: "mission" },
     { label: "Quality Policy", href: "about/quality-policy.html", key: "quality" },
     { label: "Values of Power Load BD", href: "about/values.html", key: "values" },
     { label: "Why Power Load BD?", href: "about/why-powerload.html", key: "why" }
@@ -112,14 +113,7 @@ window.POWERLOAD_SITE = {
         ["Lambert", "GF-200 / 6D10D200A", "250 kVA / 200 kW", "275 kVA / 220 kW"],
         ["KPT Portable", "LT3500MXE / LT210", "2.5 kW", "2.8 kW max"],
         ["KPT Portable", "LT12000CLE / LT500", "9.0 kW", "9.5 kW max"]
-      ],
-      specImages: [
-        "assets/images/products/generator-perkins-spec.jpg",
-        "assets/images/products/generator-cummins-spec.jpg",
-        "assets/images/products/generator-ricardo-lambert-spec.jpg",
-        "assets/images/products/generator-kpt-spec.jpg"
-      ],
-      catalog: "assets/catalogs/powerloadbd-generator-catalog.pdf"
+      ]
     },
     {
       key: "lift",
@@ -384,9 +378,7 @@ window.POWERLOAD_SITE = {
   ],
   archives: {
     documents: [
-      ["Client List", "Reference PDF for Power Load BD client and work history.", "assets/catalogs/client-list.pdf"],
-      ["Main Catalogue", "Power Load BD product catalogue.", "assets/catalogs/powerloadbd-main-catalog.pdf"],
-      ["Generator Catalogue", "Cummins, Perkins, Ricardo, Lambert, and KPT generator model details.", "assets/catalogs/powerloadbd-generator-catalog.pdf"]
+      ["Client List", "Reference PDF for Power Load BD client and work history.", "assets/catalogs/client-list.pdf"]
     ],
     gallery: [
       ["Generator Delivery", "assets/images/archives/site-delivery-truck.jpg"],

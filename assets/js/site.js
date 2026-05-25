@@ -53,9 +53,8 @@
               <div class="dropdown">${products}</div>
             </div>
             <a href="${path("clients.html")}">Clients</a>
-            <a href="${path("archives.html")}">Archives</a>
             <a href="${path("projects.html")}">Projects</a>
-            <a href="${path("service.html")}">Service</a>
+            <a href="${path("archives.html")}">Archives</a>
             <a href="${path("contact.html")}">Contact</a>
           </nav>
         </div>
@@ -191,9 +190,7 @@
           <p>Power Load BD brings core electrical products into one organized portfolio, helping clients discuss power distribution, backup generation, panel work, and renewable energy from one place.</p>
         </div>
         <div class="stat-grid">
-          <div><strong>8</strong><span>Product categories</span></div>
-          <div><strong>4</strong><span>Generator series pages</span></div>
-          <div><strong>2</strong><span>Downloadable catalogues</span></div>
+          <div><strong>10+</strong><span>Product categories</span></div>
           <div><strong>24/7</strong><span>Project-critical mindset</span></div>
         </div>
       </section>
@@ -214,19 +211,6 @@
           <h2>Solutions for distribution, backup power, and energy efficiency</h2>
         </div>
         <div class="product-grid">${productCards}</div>
-      </section>
-      <section class="section band">
-        <div class="band-inner">
-          <div>
-            <p class="kicker">Catalogues</p>
-            <h2>Review product and generator details</h2>
-            <p>Download the provided Power Load BD catalogue files for more project discussion material.</p>
-          </div>
-          <div class="button-row">
-            <a class="btn primary" href="${path("assets/catalogs/powerloadbd-main-catalog.pdf")}">Main Catalogue</a>
-            <a class="btn secondary" href="${path("assets/catalogs/powerloadbd-generator-catalog.pdf")}">Generator Catalogue</a>
-          </div>
-        </div>
       </section>
     `;
     
@@ -266,7 +250,7 @@
   }
 
   function renderService() {
-    document.title = `Service Team | ${data.company.name}`;
+    document.title = `Employees & Staff | ${data.company.name}`;
     const people = data.serviceTeam.map((person) => `
       <article class="person-card">
         ${person.image ? `<img src="${path(person.image)}" alt="${person.name}">` : `<div class="avatar">PL</div>`}
@@ -278,7 +262,7 @@
       </article>
     `).join("");
     app.innerHTML = `
-      ${hero("Service", "Service Team", "Meet the service team dedicated to customer support and technical operations.", "assets/images/products/generator.jpg")}
+      ${hero("Employees & Staff", "Employees & Staff", "Meet the service team dedicated to customer support and technical operations.", "assets/images/products/generator.jpg")}
       <section class="section people-grid">${people}</section>
     `;
   }
@@ -295,8 +279,6 @@
         ${item.specImages.map((image) => `<img src="${path(image)}" alt="${item.name} catalogue specification">`).join("")}
       </div>
     ` : "";
-    const catalogButton = item.catalog ? `<a class="btn secondary" href="${path(item.catalog)}">Download Generator Catalogue</a>` : `<a class="btn secondary" href="${path("assets/catalogs/powerloadbd-main-catalog.pdf")}">Download Main Catalogue</a>`;
-
     app.innerHTML = `
       ${hero(item.name, "Product", item.summary, item.image)}
       <section class="section product-detail">
@@ -305,9 +287,6 @@
           <h2>${item.name} solutions</h2>
           <p>${item.summary}</p>
           <ul>${item.bullets.map((bullet) => `<li>${bullet}</li>`).join("")}</ul>
-          <div class="button-row">
-            ${catalogButton}
-          </div>
         </div>
         <img src="${path(item.image)}" alt="${item.name}">
       </section>
